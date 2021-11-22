@@ -1,5 +1,5 @@
 import Server from "./server";
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 
 dotenv.config();
 const { SERVER_PORT, NODE_ENV } = process.env;

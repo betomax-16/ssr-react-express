@@ -1,7 +1,6 @@
-import * as express from "express";
+import express from "express";
+import path from "path";
 import { Request, Response, Router } from "express";
-import { ResponseWrapper } from "../utils/responseWrapper";
-import { Errors } from "../utils/errors";
 
 class Routes {
     public router: Router;
@@ -9,13 +8,8 @@ class Routes {
     constructor() {
         this.router = express.Router();    
 
-        this.router.get('/', (req: Request, res: Response) => {
-            try {
-                const data: any = { messge: 'hola mundo' };
-                ResponseWrapper.handler(res, data, 200);
-            } catch (error: any) {
-                Errors.handler(error, res);
-            }
+        this.router.get('*', (req: Request, res: Response) => {
+            res.sendFile(path.join(__dirname, 'static/index.html'));
         });
     }
 }
