@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { Demo } from "../component/demo/demo";
 import { Demo2 } from "../component/demo/demo2";
 
 export function App(props: any) {
   useEffect(() => {
-    console.log('hola');
+    
   }, []);
 
     return (
