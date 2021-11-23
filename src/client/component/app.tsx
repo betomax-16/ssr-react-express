@@ -9,11 +9,9 @@ export function App(props: any) {
   }, []);
 
     return (
-      <BrowserRouter>
-          <Switch>
-              <Route exact path='/' component={Demo} />
-              <Route path='/hola' component={Demo2} />
-          </Switch>
-      </BrowserRouter>
+      <Switch>
+          <Route exact path='/' component={Demo} />
+          <Route path='/hola' component={Demo2} />
+      </Switch>
     );
 }
